@@ -132,35 +132,35 @@ cd boilerplate && make clean
 ## 3. Demo with Screenshots
 
 ### Screenshot 1 — Multi-container supervision
-![Multi-container supervision](screenshots/1.png)
+![Multi-container supervision](screenshots/1_multicontainer.png)
 *Two containers alpha and beta running concurrently under one supervisor process shown via ps aux.*
 
 ### Screenshot 2 — Metadata tracking
-![Metadata tracking](screenshots/2.png)
+![Metadata tracking](screenshots/2_ps.png)
 *Output of ./engine ps showing container ID, host PID, and state for all tracked containers.*
 
 ### Screenshot 3 — Bounded-buffer logging
-![Bounded-buffer logging](screenshots/3.png)
+![Bounded-buffer logging](screenshots/3_logging.png)
 *Log file contents captured through the producer-consumer pipeline, written to logs/test1.log via the logger thread.*
 
 ### Screenshot 4 — CLI and IPC
-![CLI and IPC](screenshots/4.png)
+![CLI and IPC](screenshots/4_cli_ipc.png)
 *A start command issued from the CLI client reaching the supervisor via the UNIX domain socket at /tmp/mini_runtime.sock.*
 
 ### Screenshot 5 — Soft-limit warning
-![Soft-limit warning](screenshots/5.png)
+![Soft-limit warning](screenshots/5_soft-limit.png)
 *dmesg output showing the kernel module emitting a SOFT LIMIT warning when the container exceeds its 10 MiB soft limit.*
 
 ### Screenshot 6 — Hard-limit enforcement
-![Hard-limit enforcement](screenshots/6.png)
+![Hard-limit enforcement](screenshots/6_hard-limit.png)
 *dmesg showing HARD LIMIT kill event and ./engine ps confirming the container state updated to killed.*
 
 ### Screenshot 7 — Scheduling experiment
-![Scheduling experiment](screenshots/7.png)
+![Scheduling experiment](screenshots/7_scheduling.png)
 *Log output comparison of hog1 (nice 0) and hog2 (nice 19) both completing 20 seconds.*
 
 ### Screenshot 8 — Clean teardown
-![Clean teardown](screenshots/8.png)
+![Clean teardown](screenshots/8_tear-down.png)
 *ps aux output after supervisor shutdown showing no residual engine, cpu_hog, or sh processes — confirming clean reaping and no zombies.*
 
 ---
